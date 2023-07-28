@@ -1,0 +1,19 @@
+{
+    "name": "useradmin-angular-client",
+    "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "libs/frontend/useradmin/useradmin-angular-client/src",
+    "projectType": "library",
+    "targets": {
+        "generate-sources": {
+            "executor": "@trumbitta/nx-plugin-openapi:generate-api-lib-sources",
+            "options": {
+                "useDockerBuild": false,
+                "generator": "dart-dio",
+                "sourceSpecPathOrUrl": "libs/api-spec/api-spec-useradmin/src/useradmin-api.yml",
+                "additionalProperties": ""
+            }
+        }
+    },
+    "implicitDependencies": ["api-spec-useradmin"],
+    "tags": []
+}
